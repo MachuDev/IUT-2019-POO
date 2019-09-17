@@ -39,16 +39,17 @@ void ListeSimpleV2 ()
 
     // Le dernier element cree est toujours le premier de la liste
 
-    for (unsigned i = 20; i; i -= 2) AList.AddAfter (AList.Begin (), i);
-    cout << "hfejkrhg " << endl;
+    for (unsigned i = 8; i; i -= 2) AList.AddAfter (AList.Begin (), i);
 
     for (unsigned i (0); i < 5; ) {
         AList.push_front (i++);
     }
 
+    //AList.AddBefore(AList.Begin(), 54);
 
+    AList.push_front (100);
+    AList.push_back(101);
 
-    AList.Show ();
 //	AList.Show ();
 /*	int i;
     cin >>i;
@@ -71,18 +72,22 @@ void ListeSimpleV2 ()
 
     AList.push_back (6);
     AList.push_back (7);
+    AList.AddBefore(AList.Find (2), 10);
 
 
-    AList.Delete (AList.Find (2));
-    AList.Delete (AList.Find (12));
-    AList.Delete (AList.Find (20));
+    AList.Delete (AList.Find (10));
+    AList.Delete (AList.Find (101));
+    AList.Delete (AList.Find (100));
+
+    AList.Delete (AList.Find (889));
+
     AList.Show ();
     //delete ptr;
     cout << endl;
 
 }
 
-int main(int argc, char *argv[])
+int main(void)
 {
     //std::cout << "Hello World!" << std::endl;
     //ListeSimple();
