@@ -31,59 +31,89 @@ void ListeSimple (void)
 }// ListeSimple ()
 
 
-void ListeSimpleV2 ()
-{
-    cout << "ListeSimpleV2 : \n\n";
+//void ListeSimpleV2 ()
+//{
+//    cout << "ListeSimpleV2 : \n\n";
+
+//    CList<unsigned> AList;
+
+//    // Le dernier element cree est toujours le premier de la liste
+
+//    for (unsigned i = 8; i; i -= 2) AList.AddAfter (AList.Begin (), i);
+
+//    for (unsigned i (0); i < 5; ) {
+//        AList.push_front (i++);
+//    }
+
+//    //AList.AddBefore(AList.Begin(), 54);
+
+//    AList.push_front (100);
+//    AList.push_back(101);
+
+////	AList.Show ();
+///*	int i;
+//    cin >>i;
+//    CNodeInt* ptr = AList.Find (i);
+//    AList.Add (3*i, ptr);
+//    AList.Show ();
+
+//    cout << ((ptr != NULL)?  " " : "non ") << "trouve" << endl;
+//*/
+//    //cout << "valeur trouvée" << ptr . GetData () << endl;
+
+//    //delete AList;
+
+//    /*CNodeInt* ptr = AList.Find (2);
+//    cout << ((ptr != NULL)?  " " : "non ") << "trouve" << endl;
+//    AList.Delete (ptr);
+//    AList.Show ();*/
+
+//    //AList.Delete (AList.Find (0));
+
+//    AList.push_back (6);
+//    AList.push_back (7);
+//    AList.AddBefore(AList.Find (2), 10);
+
+
+//    AList.Delete (AList.Find (10));
+//    AList.Delete (AList.Find (101));
+//    AList.Delete (AList.Find (100));
+
+//    AList.Delete (AList.Find (889));
+
+//    AList.Show ();
+//    //delete ptr;
+//    cout << endl;
+
+//}
+
+void ListeSimpleV3 (){
+    cout << "ListeSimpleV3 : \n\n";
 
     CList<unsigned> AList;
 
-    // Le dernier element cree est toujours le premier de la liste
+    AList.Add(3);
 
-    for (unsigned i = 8; i; i -= 2) AList.AddAfter (AList.Begin (), i);
+    AList.Add(2);
 
-    for (unsigned i (0); i < 5; ) {
-        AList.push_front (i++);
-    }
+    AList.Add(1);
 
-    //AList.AddBefore(AList.Begin(), 54);
-
-    AList.push_front (100);
-    AList.push_back(101);
-
-//	AList.Show ();
-/*	int i;
-    cin >>i;
-    CNodeInt* ptr = AList.Find (i);
-    AList.Add (3*i, ptr);
-    AList.Show ();
-
-    cout << ((ptr != NULL)?  " " : "non ") << "trouve" << endl;
-*/
-    //cout << "valeur trouvée" << ptr . GetData () << endl;
-
-    //delete AList;
-
-    /*CNodeInt* ptr = AList.Find (2);
-    cout << ((ptr != NULL)?  " " : "non ") << "trouve" << endl;
-    AList.Delete (ptr);
-    AList.Show ();*/
-
-    //AList.Delete (AList.Find (0));
-
-    AList.push_back (6);
-    AList.push_back (7);
-    AList.AddBefore(AList.Find (2), 10);
+    AList.Add(999);
 
 
-    AList.Delete (AList.Find (10));
-    AList.Delete (AList.Find (101));
-    AList.Delete (AList.Find (100));
+    AList.Show();
 
-    AList.Delete (AList.Find (889));
+    auto  a = AList.Find(2);
+    AList.Show();
+    AList.Find(3);
+    AList.Show();
+    AList.Delete(a);
+    AList.Show();
+    AList.Find(1);
+    AList.Show();
+    AList.Find(8687);
+    AList.Show();
 
-    AList.Show ();
-    //delete ptr;
-    cout << endl;
 
 }
 
@@ -91,6 +121,7 @@ int main(void)
 {
     //std::cout << "Hello World!" << std::endl;
     //ListeSimple();
-    ListeSimpleV2 ();
+    //ListeSimpleV2 ();
+    ListeSimpleV3 ();
     return 0;
 }
